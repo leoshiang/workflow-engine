@@ -1,0 +1,21 @@
+{
+  "name": "dolphin-workflow-engine",
+  "version": "1.0.0",
+  "description": "一個用 Node.JS 撰寫的工具，可以執行 Draw.IO 繪製流程圖。 ",
+  "main": "source/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leo Shiang",
+  "license": "MIT",
+  "dependencies": {
+    "acorn": "^8.8.0",
+    "he": "^1.2.0",
+    "robotjs": "^0.6.0",
+    "xml2js": "^0.4.23"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leoshiang/dolphin-workflow-engine.git"
+  }
+}

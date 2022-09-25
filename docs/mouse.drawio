@@ -1,0 +1,90 @@
+<mxfile host="Electron" modified="2022-09-24T23:42:26.885Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.2.3 Chrome/102.0.5005.167 Electron/19.0.11 Safari/537.36" etag="Ef2DYfjP1vNBl-mjBjYU" compressed="false" version="20.2.3" type="device">
+  <diagram id="zHJoLA6md0Yeo67uzJwa" name="第1頁">
+    <mxGraphModel dx="850" dy="559" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m3pfPtTyuK7HYTcpv6uo-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Courier New;fontSize=12;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="m3pfPtTyuK7HYTcpv6uo-2" target="m3pfPtTyuK7HYTcpv6uo-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="20" as="sourcePoint" />
+            <mxPoint x="170" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object label="" type="ENTRY_POINT" id="m3pfPtTyuK7HYTcpv6uo-2">
+          <mxCell style="ellipse;fontStyle=0;fontSize=12;sketch=0;rounded=1;align=left;fontFamily=Iosevka Fixed;strokeWidth=2;shadow=0;html=0;" parent="1" vertex="1">
+            <mxGeometry x="160" y="80" width="40" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="Dx2b7ezfvi1oqeqgblj4-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fontFamily=Iosevka Fixed;fontStyle=0" parent="1" source="m3pfPtTyuK7HYTcpv6uo-4" target="Ot0KBQQzt72eOoxGLC2g-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="var position = mouse.getPosition();&#xa;print(&#39;position.x = &#39; + position.x);&#xa;print(&#39;position.y = &#39; + position.y);" type="PROCESS" id="m3pfPtTyuK7HYTcpv6uo-4">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" parent="1" vertex="1">
+            <mxGeometry x="40" y="160" width="280" height="60" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="EXIT_POINT" id="m3pfPtTyuK7HYTcpv6uo-22">
+          <mxCell style="shape=sumEllipse;perimeter=ellipsePerimeter;backgroundOutline=1;fontStyle=0;fontSize=16;sketch=0;rounded=1;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;shadow=0;html=0;" parent="1" vertex="1">
+            <mxGeometry x="160" y="580" width="40" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="UbTHWvcrtNXVTwTKfJbN-1" value="內建 mouse 物件功能說明" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=5;strokeWidth=1;fontSize=20;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="140" y="20" width="660" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UbTHWvcrtNXVTwTKfJbN-2" value="mouse" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;fontColor=#FFFFFF;fontSize=18;fontStyle=1;strokeWidth=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ot0KBQQzt72eOoxGLC2g-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;函數：mouse.getPosition()&lt;/font&gt;&lt;/b&gt;&lt;br&gt;說明：取得滑鼠位置&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;。&lt;br&gt;回傳結果：&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;物件 {x ,y}。&lt;/font&gt;&lt;/span&gt;&lt;/blockquote&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=5;verticalAlign=top;fontFamily=Tahoma;" parent="1" vertex="1">
+          <mxGeometry x="340" y="800" width="260" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Ot0KBQQzt72eOoxGLC2g-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Iosevka Fixed;strokeWidth=2;fontStyle=0" parent="1" source="Ot0KBQQzt72eOoxGLC2g-3" target="Ot0KBQQzt72eOoxGLC2g-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="mouse.moveTo(135, 40);" type="PROCESS" id="Ot0KBQQzt72eOoxGLC2g-3">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" parent="1" vertex="1">
+            <mxGeometry x="40" y="260" width="280" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="Ot0KBQQzt72eOoxGLC2g-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;函數：mouse.moveTo(x, y)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;說明：移動滑鼠到位置 x, y。&lt;br&gt;參數：&lt;br&gt;x&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;x 座標，整數值。&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;y&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;y 座標，整數值。&lt;/font&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=5;verticalAlign=top;fontFamily=Tahoma;" parent="1" vertex="1">
+          <mxGeometry x="340" y="640" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ctkfXIj9pQTAeld8ZS5S-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Iosevka Fixed;strokeWidth=2;" parent="1" source="Ot0KBQQzt72eOoxGLC2g-5" target="ctkfXIj9pQTAeld8ZS5S-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="mouse.button(&quot;left&quot;, &quot;down&quot;);" type="PROCESS" id="Ot0KBQQzt72eOoxGLC2g-5">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" parent="1" vertex="1">
+            <mxGeometry x="40" y="340" width="280" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="ctkfXIj9pQTAeld8ZS5S-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Tahoma;strokeWidth=2;" parent="1" source="ctkfXIj9pQTAeld8ZS5S-2" target="m3pfPtTyuK7HYTcpv6uo-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="mouse.button(&quot;left&quot;, &quot;up&quot;);" type="PROCESS" id="ctkfXIj9pQTAeld8ZS5S-2">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" parent="1" vertex="1">
+            <mxGeometry x="40" y="500" width="280" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="ctkfXIj9pQTAeld8ZS5S-3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;函數：mouse.button(button = &quot;left&quot;,&amp;nbsp;&lt;/b&gt;&lt;b&gt;down = &quot;down&quot;&lt;/b&gt;&lt;b style=&quot;&quot;&gt;)&lt;/b&gt;&lt;br&gt;說明：切換滑鼠按鈕狀態。&lt;br&gt;參數：&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;button&lt;br&gt;&lt;/span&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;按鈕，可以使用 l&lt;/span&gt;eft、right 或 middle，預設值為 left。&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;down&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;狀態，預設值為 &quot;down&quot;。&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&quot;down&quot; 代表將滑鼠按鈕狀態設為&quot;按下&quot;。&lt;/span&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&quot;up&quot; 代表將滑鼠按鈕狀態設為&quot;放開&quot;。&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=5;verticalAlign=top;fontFamily=Tahoma;" parent="1" vertex="1">
+          <mxGeometry x="340" y="80" width="460" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ctkfXIj9pQTAeld8ZS5S-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Iosevka Fixed;strokeWidth=2;" parent="1" source="ctkfXIj9pQTAeld8ZS5S-4" target="ctkfXIj9pQTAeld8ZS5S-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="mouse.dragTo(200, 200);" type="PROCESS" id="ctkfXIj9pQTAeld8ZS5S-4">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" parent="1" vertex="1">
+            <mxGeometry x="40" y="420" width="280" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="ctkfXIj9pQTAeld8ZS5S-7" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;函數：mouse.dragTo(x, y)&lt;/b&gt;&lt;br&gt;&lt;/font&gt;說明：按下滑鼠鍵並拖拉至指定位置。&lt;br&gt;參數：&lt;br&gt;x&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;x 座標，整數值。&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;y&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;y 座標，整數值。&lt;/font&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=5;verticalAlign=top;fontFamily=Tahoma;" parent="1" vertex="1">
+          <mxGeometry x="340" y="480" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ctkfXIj9pQTAeld8ZS5S-10" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;函數：mouse.click(button = &quot;left&quot;, double = false)&lt;/b&gt;&lt;br&gt;說明：滑鼠點擊。&lt;br&gt;參數：&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;button&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;按鈕，可以使用 l&lt;/span&gt;eft、right 或 middle，預設值為 left。&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;double&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;是否雙擊。true = 是，false = 否。預設值 false。&lt;/font&gt;&lt;/blockquote&gt;&lt;/font&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=5;verticalAlign=top;fontFamily=Tahoma;" parent="1" vertex="1">
+          <mxGeometry x="340" y="300" width="460" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ctkfXIj9pQTAeld8ZS5S-11" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;&quot;&gt;函數：mouse.scroll(x, y)&lt;/b&gt;&lt;br&gt;說明：捲動。&lt;br&gt;參數：&lt;br&gt;&lt;/font&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;/blockquote&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;x&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;x 捲動量，&amp;lt; 0 代表向左。&lt;/span&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/blockquote&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;y&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;y 捲動量，&amp;lt; 0 代表向下。&lt;/span&gt;&lt;/blockquote&gt;&lt;/font&gt;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#ffff88;strokeColor=#36393d;align=left;spacingLeft=5;verticalAlign=top;fontFamily=Tahoma;" parent="1" vertex="1">
+          <mxGeometry x="340" y="900" width="260" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

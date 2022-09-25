@@ -1,0 +1,93 @@
+<mxfile host="Electron" modified="2022-09-24T12:48:53.041Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.2.3 Chrome/102.0.5005.167 Electron/19.0.11 Safari/537.36" etag="LD7J2bHIdIO8tJnqeOHx" compressed="false" version="20.2.3" type="device">
+  <diagram id="zHJoLA6md0Yeo67uzJwa" name="第1頁">
+    <mxGraphModel dx="944" dy="621" grid="1" gridSize="5" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m3pfPtTyuK7HYTcpv6uo-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Courier New;fontSize=12;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="m3pfPtTyuK7HYTcpv6uo-2" target="m3pfPtTyuK7HYTcpv6uo-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="20" as="sourcePoint" />
+            <mxPoint x="330" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <object label="" type="ENTRY_POINT" id="m3pfPtTyuK7HYTcpv6uo-2">
+          <mxCell style="ellipse;fontStyle=0;fontSize=12;sketch=0;rounded=1;align=left;fontFamily=Iosevka Fixed;strokeWidth=2;shadow=0;html=0;" parent="1" vertex="1">
+            <mxGeometry x="340" y="100" width="40" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="m3pfPtTyuK7HYTcpv6uo-4" target="tBGhf6zMUL_7Af1qsQVH-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="var twoPI = Math.PI * 2.0;&#xa;var screenSize = getScreenSize();&#xa;var height = (screenSize.height / 2) - 10;&#xa;var width = screenSize.width;&#xa;var x= 0;" type="PROCESS" id="m3pfPtTyuK7HYTcpv6uo-4">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" parent="1" vertex="1">
+            <mxGeometry x="200" y="180" width="320" height="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="EXIT_POINT" id="m3pfPtTyuK7HYTcpv6uo-22">
+          <mxCell style="shape=sumEllipse;perimeter=ellipsePerimeter;backgroundOutline=1;fontStyle=0;fontSize=16;sketch=0;rounded=1;fontFamily=Iosevka Fixed;align=left;strokeWidth=2;shadow=0;html=0;" parent="1" vertex="1">
+            <mxGeometry x="340" y="640" width="40" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="UbTHWvcrtNXVTwTKfJbN-1" value="移動滑鼠（拆解成多步驟）" style="text;html=1;strokeColor=default;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;spacingLeft=5;strokeWidth=1;fontSize=14;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="140" y="20" width="580" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UbTHWvcrtNXVTwTKfJbN-2" value="範例 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;fontColor=#FFFFFF;fontSize=18;fontStyle=1;strokeWidth=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="20" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="tBGhf6zMUL_7Af1qsQVH-13" target="m3pfPtTyuK7HYTcpv6uo-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="600" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-3" value="true" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBGhf6zMUL_7Af1qsQVH-2">
+          <mxGeometry x="-0.35" y="-1" relative="1" as="geometry">
+            <mxPoint x="26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="tBGhf6zMUL_7Af1qsQVH-13" target="tBGhf6zMUL_7Af1qsQVH-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="580" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="160" y="580" />
+              <mxPoint x="160" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-9" value="false" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="tBGhf6zMUL_7Af1qsQVH-8">
+          <mxGeometry x="-0.6333" y="1" relative="1" as="geometry">
+            <mxPoint x="6" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="tBGhf6zMUL_7Af1qsQVH-4" target="tBGhf6zMUL_7Af1qsQVH-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="x++;" type="PROCESS" id="tBGhf6zMUL_7Af1qsQVH-4">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=center;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" vertex="1" parent="1">
+            <mxGeometry x="300" y="480" width="120" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="tBGhf6zMUL_7Af1qsQVH-6" target="tBGhf6zMUL_7Af1qsQVH-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="y = height * Math.sin((twoPI * x) / width) + height;" type="PROCESS" id="tBGhf6zMUL_7Af1qsQVH-6">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=center;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" vertex="1" parent="1">
+            <mxGeometry x="200" y="320" width="320" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="tBGhf6zMUL_7Af1qsQVH-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="tBGhf6zMUL_7Af1qsQVH-7" target="tBGhf6zMUL_7Af1qsQVH-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object label="moveMouse(x, y);" type="PROCESS" id="tBGhf6zMUL_7Af1qsQVH-7">
+          <mxCell style="fontSize=12;fontStyle=0;sketch=0;rounded=0;fontFamily=Iosevka Fixed;align=center;strokeWidth=2;arcSize=7;shadow=0;html=0;spacingLeft=5;verticalAlign=top;spacingTop=0;spacing=5;" vertex="1" parent="1">
+            <mxGeometry x="300" y="400" width="120" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="x &gt; width" type="DECISION" id="tBGhf6zMUL_7Af1qsQVH-13">
+          <mxCell style="strokeWidth=2;shape=mxgraph.flowchart.decision;whiteSpace=wrap;rounded=0;shadow=0;fontFamily=Iosevka Fixed;fontSize=12;" vertex="1" parent="1">
+            <mxGeometry x="300" y="560" width="120" height="40" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
