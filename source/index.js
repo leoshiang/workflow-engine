@@ -9,8 +9,8 @@
  */
 
 const ModelBuilder = require('../source/model-builder')
-const ModelExecutor = require('../source/model-executor')
-const Diagram = require('../source/diagram')
+const ModelRunner = require('./model-runner')
+const Diagram = require('./mxfile')
 const fs = require('fs')
 
 ;(async () => {
@@ -25,5 +25,5 @@ const fs = require('fs')
   }
   const diagram = await new Diagram().loadFromFile(fileName)
   const model = await new ModelBuilder().build(diagram)
-  new ModelExecutor().execute(model)
+  new ModelRunner().run(model)
 })()

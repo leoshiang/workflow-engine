@@ -8,7 +8,6 @@
  * @author leoshiang@gmail.com (Leo Shiang)
  */
 
-const DolphinInterpreter = require('./dolphin-interpreter')
 const NodeTypes = require('./node-types')
 
 /**
@@ -60,10 +59,11 @@ class Node {
 
   /**
    * 執行程式碼並回傳下一個節點。
+   * @param {ModelRunner} executor
    * @returns {Node}
    */
-  execute () {
-    DolphinInterpreter.execute(this.code)
+  execute (executor) {
+    executor.execute(this.code)
     return this.getNextTargetNode()
   }
 

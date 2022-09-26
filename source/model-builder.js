@@ -9,7 +9,7 @@
  */
 
 const Model = require('./model')
-const NodeClasses = require('./node-classes')
+const NodeClasses = require('./nodes/node-classes')
 const he = require('he')
 
 /**
@@ -19,7 +19,7 @@ class ModelBuilder {
 
   /**
    * 從 Diagram 讀入模型。
-   * @param {Diagram} diagram
+   * @param {MXFile} diagram
    * @returns {Promise<Model>}
    */
   async build (diagram) {

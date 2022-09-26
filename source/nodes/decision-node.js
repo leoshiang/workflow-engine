@@ -8,7 +8,6 @@
  * @author leoshiang@gmail.com (Leo Shiang)
  */
 
-const DolphinInterpreter = require('./dolphin-interpreter')
 const Node = require('./node')
 
 /**
@@ -28,12 +27,13 @@ class DecisionNode extends Node {
 
   /**
    * 執行程式碼。
+   * @param {ModelRunner} executor
    * @returns {null|Node}
    */
-  execute () {
+  execute (executor) {
     for (const connection of this.targetConnections) {
       let expression = this.getLogicalExpression(connection)
-      const result = DolphinInterpreter.execute(expression)
+      const result = executor.execute(expression)
       if (this.isResultEquals(connection, result)) {
         return connection.target
       }

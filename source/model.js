@@ -9,7 +9,7 @@
  */
 
 const Connection = require('./connection')
-const NodeTypes = require('./node-types')
+const NodeTypes = require('./nodes/node-types')
 
 /**
  * 模型。
