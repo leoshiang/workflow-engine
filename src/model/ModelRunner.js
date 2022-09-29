@@ -24,7 +24,7 @@ class ModelRunner {
   }
 
   run (model) {
-    let currentStep = model.getEntryPoint().getNextStep()
+    let currentStep = model.findEntryPoint().getNextStep()
     while (!this.isFinished(currentStep)) {
       currentStep = currentStep.execute(this)
     }

@@ -28,7 +28,7 @@ class Model {
     return this._steps.find(x => x.getId() === id)
   }
 
-  getEntryPoint () {
+  findEntryPoint () {
     return this._steps.find(x => x.getType() === StepTypes.ENTRY_POINT)
   }
 }
