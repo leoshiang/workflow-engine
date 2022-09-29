@@ -5,13 +5,9 @@ class Plugin {
     this._globalObject = globalObject
   }
 
-  _globalObject
-
   get globalObject () {
     return this._globalObject
   }
-
-  _interpreter
 
   get interpreter () {
     return this._interpreter
