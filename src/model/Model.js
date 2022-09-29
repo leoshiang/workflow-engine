@@ -31,6 +31,10 @@ class Model {
   findEntryPoint () {
     return this._steps.find(x => x.getType() === StepTypes.ENTRY_POINT)
   }
+
+  findExitPoint () {
+    return this._steps.find(x => x.getType() === StepTypes.EXIT_POINT)
+  }
 }
 
 module.exports = Model

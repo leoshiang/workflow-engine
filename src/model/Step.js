@@ -7,6 +7,14 @@ class Step {
     this._targetConnections = []
   }
 
+  get sourceConnections () {
+    return this._sourceConnections
+  }
+
+  get targetConnections () {
+    return this._targetConnections
+  }
+
   addSourceConnection (connection) {
     this._sourceConnections.push(connection)
   }
@@ -30,16 +38,8 @@ class Step {
     return this.getTargetSteps()[0]
   }
 
-  getSourceConnections () {
-    return this._sourceConnections
-  }
-
   getSourceSteps () {
     return this._sourceConnections.map(c => c.source)
-  }
-
-  getTargetConnections () {
-    return this._targetConnections
   }
 
   getTargetSteps () {

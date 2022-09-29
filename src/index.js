@@ -3,6 +3,7 @@ const ModelRunner = require('./model/ModelRunner')
 const StepBuilderManager = require('./builders/StepBuilderManager')
 const StepManager = require('./model/StepManager')
 const Diagram = require('./model/Diargam')
+const Validator = require('./model/ModelValidator')
 const fs = require('fs')
 
 ;
@@ -16,9 +17,17 @@ const fs = require('fs')
     console.log(`檔案 ${fileName} 不存在！`)
     process.exit(1)
   }
+
   StepBuilderManager.init()
   StepManager.init()
   const diagram = await new Diagram().loadFromFile(fileName)
   const model = await new ModelBuilder().build(diagram)
+
+  const errorMessages = new Validator().validate(model)
+  if (errorMessages.length > 0) {
+    const messageLines = errorMessages.reduce((prev, curr) => prev + curr + '\r\n', '\r\n')
+    throw new Error(messageLines)
+  }
+
   new ModelRunner().run(model)
 })()
