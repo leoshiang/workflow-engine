@@ -67,7 +67,7 @@
     // When `locations` is on, `loc` properties holding objects with
     // `start` and `end` properties in `{line, column}` form (with
     // line being 1-based and column 0-based) will be attached to the
-    // nodes.
+    // steps.
     locations: false,
     // A function can be passed as `onComment` option, which will
     // cause Acorn to call that function with `(block, text, start,
@@ -94,7 +94,7 @@
     // toplevel forms of the parsed file to the `Program` (top) node
     // of an existing parse tree.
     program: null,
-    // When `location` is on, you can pass this to record the source
+    // When `location` is on, you can pass this to record the src
     // file in every node's `loc` object.
     sourceFile: null,
     // This value, if given, is stored in every node, whether
@@ -317,7 +317,7 @@
   //
   // `isAssign` marks all of `=`, `+=`, `-=` etcetera, which act as
   // binary operators with a very low precedence, that should result
-  // in AssignmentExpression nodes.
+  // in AssignmentExpression steps.
 
   var _slash = {binop: 10, beforeExpr: true}, _eq = {isAssign: true, beforeExpr: true};
   var _assign = {isAssign: true, beforeExpr: true};
@@ -1202,7 +1202,7 @@
       labels.push(switchLabel);
 
       // Statements under must be grouped (by label) in SwitchCase
-      // nodes. `cur` is used to keep the node that we are currently
+      // steps. `cur` is used to keep the node that we are currently
       // adding statements to.
 
       for (var cur, sawDefault; tokType != _braceR;) {

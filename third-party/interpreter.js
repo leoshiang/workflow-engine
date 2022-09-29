@@ -181,7 +181,7 @@ Interpreter.vm = null;
 Interpreter.currentInterpreter_ = null;
 
 /**
- * The global object (`window` in a browser, `global` in node.js) is usually
+ * The global object (`window` in a browser, `global` in Step.js) is usually
  * `globalThis`, but older systems use `this`.
  */
 Interpreter.nativeGlobal =
@@ -254,8 +254,8 @@ Interpreter.legalArrayIndex = function(x) {
  * constant value.  Used to remove highlighting from polyfills and to set
  * highlighting in an eval to cover the entire eval expression.
  * @param {!Object} node AST node.
- * @param {number=} start Starting character of all nodes, or undefined.
- * @param {number=} end Ending character of all nodes, or undefined.
+ * @param {number=} start Starting character of all steps, or undefined.
+ * @param {number=} end Ending character of all steps, or undefined.
  * @private
  */
 Interpreter.stripLocations_ = function(node, start, end) {
@@ -3003,7 +3003,7 @@ Interpreter.prototype.setValueToScope = function(name, value) {
  * Create a new scope for the given node and populate it with all variables
  * and named functions.
  * @param {!Object} node AST node (usually a program or function when initally
- *   calling this function, though it recurses to scan many child nodes).
+ *   calling this function, though it recurses to scan many child steps).
  * @param {!Interpreter.Scope} scope Scope dictionary to populate.
  * @return {!Object} Map of all variable and function names.
  * @private
@@ -3793,7 +3793,7 @@ Interpreter.prototype['stepCallExpression'] = function(stack, state, node) {
         state.funcThis_ = this.boxThis_(state.funcThis_);
       }
       func.asyncFunc.apply(state.funcThis_, argsWithCallback);
-      return;
+
     } else {
       /* A child of a function is a function but is not callable.  For example:
       var F = function() {};

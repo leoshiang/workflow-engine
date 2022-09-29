@@ -1,5 +1,5 @@
 # dolphin-workflow-engine
-一個用 Node.JS 撰寫的工具，可以將 Draw.IO 繪製的流程圖當成程式碼執行。
+一個用 Step.JS 撰寫的工具，可以將 Draw.IO 繪製的流程圖當成程式碼執行。
 
 # 使用方式
 1. 下載整個專案。
