@@ -8,19 +8,14 @@
 3. 開啟 terminal 或 command prompt，切換目錄至 dist
 4. Windows 執行
 ```
-dwe-win "..\tests\範例1：尋找陣列中最大的數字並計算所有數字的總和.drawio"
+dwe-win "..\tests\find-the-largest-number-and-calculate-the-sum.drawio"
 ```
 5. macOS 執行 
 ```
-dwe-macos "../tests/範例1：尋找陣列中最大的數字並計算所有數字的總和.drawio"
+dwe-macos "../tests/find-the-largest-number-and-calculate-the-sum.drawio"
 ```
-# 範例
 
-* [尋找陣列中最大的數字並計算所有數字的總和](tests/範例1_尋找陣列中最大的數字並計算所有數字的總和.svg) 
-* [移動滑鼠](tests/move-the-mouse.svg) 
-* [移動滑鼠（拆解成多步驟）](tests/範例3_移動滑鼠（拆解成多步驟）.svg) 
-
-# 說明文件
+# 文件
 
 * [鍵盤](docs/keyboard.svg) 
 * [滑鼠](docs/mouse.svg) 
