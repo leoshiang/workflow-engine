@@ -2,8 +2,8 @@ const Step = require('./Step')
 
 class ProcessStep extends Step {
 
-  execute (executor) {
-    executor.execute(this._code)
+  async execute (runner) {
+    runner.execute(this._code)
     return this.getNextStep()
   }
 

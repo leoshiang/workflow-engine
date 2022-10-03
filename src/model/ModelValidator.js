@@ -1,4 +1,4 @@
-const StepTypes = require('./StepTypes')
+const StepTypes = require('./steps/StepTypes')
 
 class ModelValidator {
 
@@ -7,19 +7,14 @@ class ModelValidator {
     this.initRules()
   }
 
-  initRules () {
-    this._rules.push(this.mustHaveEntryAndExitPoints.bind(this))
-    this._rules.push(this.everyProcessStepMustHaveSourceAndTarget.bind(this))
-  }
-
   everyProcessStepMustHaveSourceAndTarget (model) {
     const result = []
     this.getProcessSteps(model).forEach(x => {
       if (x.sourceConnections.length === 0) {
-        result.push(`\r\n沒有來源連接到此步驟。\r\n編號:${x.getId()}\r\nCode:${x.getCode()}`)
+        result.push(`\r\n沒有來源連接到此步驟。\r\n編號:${x.id}\r\nCode:${x.code}`)
       }
       if (x.targetConnections.length === 0) {
-        result.push(`\r\n沒有連接到其他步驟。\r\n編號:${x.getId()}\r\nCode:${x.getCode()}`)
+        result.push(`\r\n沒有連接到其他步驟。\r\n編號:${x.id}\r\nCode:${x.code}`)
       }
     })
     return result
@@ -27,13 +22,18 @@ class ModelValidator {
 
   getProcessSteps (model) {
     return model.steps.filter(
-      x => x.getType() !== StepTypes.ENTRY_POINT && x.getType() !== StepTypes.EXIT_POINT)
+      x => x.type !== StepTypes.START && x.type !== StepTypes.STOP)
   }
 
-  mustHaveEntryAndExitPoints (model) {
+  initRules () {
+    this._rules.push(this.mustHaveStartAndStop.bind(this))
+    this._rules.push(this.everyProcessStepMustHaveSourceAndTarget.bind(this))
+  }
+
+  mustHaveStartAndStop (model) {
     const result = []
-    if (!model.findEntryPoint()) result.push('沒有起點(ENTRY_POINT)')
-    if (!model.findExitPoint()) result.push('沒有迄點(EXIT_POINT)')
+    if (!model.findEntryPoint()) result.push('沒有起點(START)')
+    if (!model.findExitPoint()) result.push('沒有迄點(STOP)')
     return result
   }
 

@@ -1,5 +1,5 @@
 const Connection = require('./Connection')
-const StepTypes = require('./StepTypes')
+const StepTypes = require('./steps/StepTypes')
 
 class Model {
 
@@ -24,16 +24,16 @@ class Model {
     return connection
   }
 
-  findStep (id) {
-    return this._steps.find(x => x.getId() === id)
-  }
-
   findEntryPoint () {
-    return this._steps.find(x => x.getType() === StepTypes.ENTRY_POINT)
+    return this._steps.find(x => x.type === StepTypes.START)
   }
 
   findExitPoint () {
-    return this._steps.find(x => x.getType() === StepTypes.EXIT_POINT)
+    return this._steps.find(x => x.type === StepTypes.STOP)
+  }
+
+  findStep (id) {
+    return this._steps.find(x => x.id === id)
   }
 }
 

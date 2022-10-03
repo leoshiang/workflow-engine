@@ -6,10 +6,10 @@ class DecisionStep extends Step {
     super(id, type, code)
   }
 
-  execute (executor) {
+  execute (runner) {
     for (const connection of this._targetConnections) {
       let expression = this.getLogicalExpression(connection)
-      const result = executor.execute(expression)
+      const result = runner.execute(expression)
       if (this.isResultEquals(connection, result)) {
         return connection.target
       }

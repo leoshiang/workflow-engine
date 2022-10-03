@@ -1,7 +1,7 @@
 const ModelBuilder = require('./builders/ModelBuilder')
 const ModelRunner = require('./model/ModelRunner')
 const StepBuilderManager = require('./builders/StepBuilderManager')
-const StepManager = require('./model/StepManager')
+const StepManager = require('./model/steps/StepManager')
 const Diagram = require('./model/Diargam')
 const Validator = require('./model/ModelValidator')
 const fs = require('fs')
@@ -29,5 +29,5 @@ const fs = require('fs')
     throw new Error(messageLines)
   }
 
-  new ModelRunner().run(model)
+  await new ModelRunner().run(model)
 })()

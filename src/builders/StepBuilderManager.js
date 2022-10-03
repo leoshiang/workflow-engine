@@ -1,5 +1,9 @@
-const StepTypes = require('../model/StepTypes')
+const StepTypes = require('../model/steps/StepTypes')
 const StepBuilder = require('../builders/StepBuilder')
+const SendEmailStepBuilder = require('./SendEmailStepBuilder')
+const CsvReaderStepBuilder = require('./CsvReaderStepBuilder')
+const HtmlParserStepBuilder = require('./HtmlParsserStepBuilder')
+const PromptStepBuilder = require('./PromptStepBuilder')
 
 class StepBuilderManager {
   constructor () {
@@ -13,10 +17,14 @@ class StepBuilderManager {
   }
 
   init () {
-    this.register(StepTypes.ENTRY_POINT, StepBuilder)
-    this.register(StepTypes.EXIT_POINT, StepBuilder)
+    this.register(StepTypes.START, StepBuilder)
+    this.register(StepTypes.STOP, StepBuilder)
     this.register(StepTypes.PROCESS, StepBuilder)
     this.register(StepTypes.DECISION, StepBuilder)
+    this.register(StepTypes.SEND_EMAIL, SendEmailStepBuilder)
+    this.register(StepTypes.CSV_READER, CsvReaderStepBuilder)
+    this.register(StepTypes.HTML_PARSER, HtmlParserStepBuilder)
+    this.register(StepTypes.PROMPT, PromptStepBuilder)
   }
 
   register (type, builderClass) {

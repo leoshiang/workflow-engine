@@ -18,16 +18,6 @@ class Diagram {
     return this._objects
   }
 
-  async loadFromFile (fileName) {
-    if (!fs.existsSync(fileName)) throw new Error(`檔案 ${fileName} 不存在！`)
-    const data = fs.readFileSync(fileName, 'utf8')
-    const xml = await xmlParser.parseStringPromise(data)
-    await this.decompress(xml)
-    this.getObjects(xml)
-    this.getCells(xml)
-    return this
-  }
-
   async decompress (xml) {
     for (let diagram of xml.mxfile.diagram) {
       if (!diagram._) continue
@@ -47,6 +37,16 @@ class Diagram {
   getObjects (xml) {
     const model = xml.mxfile.diagram[0].mxGraphModel[0]
     this._objects = model.root ? model.root[0].object : []
+  }
+
+  async loadFromFile (fileName) {
+    if (!fs.existsSync(fileName)) throw new Error(`檔案 ${fileName} 不存在！`)
+    const data = fs.readFileSync(fileName, 'utf8')
+    const xml = await xmlParser.parseStringPromise(data)
+    await this.decompress(xml)
+    this.getObjects(xml)
+    this.getCells(xml)
+    return this
   }
 }
 

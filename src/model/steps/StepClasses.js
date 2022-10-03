@@ -5,8 +5,8 @@ const StepTypes = require('./StepTypes')
 const stepClasses = {}
 stepClasses[StepTypes.DECISION] = DecisionStep
 stepClasses[StepTypes.PROCESS] = ProcessStep
-stepClasses[StepTypes.EXIT_POINT] = ProcessStep
-stepClasses[StepTypes.ENTRY_POINT] = ProcessStep
+stepClasses[StepTypes.STOP] = ProcessStep
+stepClasses[StepTypes.START] = ProcessStep
 stepClasses[StepTypes.PROCESS] = ProcessStep
 
 function get (type) {

@@ -14,13 +14,21 @@ class ModelBuilder {
     return model
   }
 
-  createSteps (model) {
-    this.findObjectsWithType()
-        .forEach(object => this.createStep(model, object))
+  createConnection (model, line) {
+    const source = model.findStep(line.$.source)
+    const target = model.findStep(line.$.target)
+    if (!source || !target) {
+      console.log('====>')
+      console.log(line)
+    }
+    const textCell = this._diagram.cells.find(cell => cell.$.parent === line.$.id)
+    const text = textCell ? textCell.$.value : ''
+    model.createConnection(source, target, text)
   }
 
-  findObjectsWithType() {
-    return this._diagram.objects.filter(object => object.$.type)
+  createConnections (model) {
+    this.getConnectedLines()
+        .forEach(line => this.createConnection(model, line))
   }
 
   createStep (model, object) {
@@ -31,21 +39,17 @@ class ModelBuilder {
     model.addStep(step)
   }
 
-  createConnections (model) {
-    this.getConnectedLines()
-        .forEach(line => this.createConnection(model, line))
+  createSteps (model) {
+    const objects = this.findObjectsWithType()
+    objects.forEach(object => this.createStep(model, object))
+  }
+
+  findObjectsWithType () {
+    return this._diagram.objects.filter(object => object.$.type)
   }
 
   getConnectedLines () {
     return this._diagram.cells.filter(c => c.$.source && c.$.target)
-  }
-
-  createConnection (model, line) {
-    const source = model.findStep(line.$.source)
-    const target = model.findStep(line.$.target)
-    const textCell = this._diagram.cells.find(cell => cell.$.parent === line.$.id)
-    const text = textCell ? textCell.$.value : ''
-    model.createConnection(source, target, text)
   }
 
 }

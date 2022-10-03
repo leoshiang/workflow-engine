@@ -1,15 +1,15 @@
 const he = require('he')
-const StepManager = require('../model/StepManager')
+const StepManager = require('../model/steps/StepManager')
 
 class StepBuilder {
 
   build () {
-    const code = this.getCode()
     const type = this.getType()
-    return StepManager.createInstance(type)
-                      .setId(this.getId())
-                      .setType(type)
-                      .setCode(code)
+    const instance = StepManager.createInstance(type)
+    instance.id = this.getId()
+    instance.type = type
+    instance.code = this.getCode()
+    return instance
   }
 
   getChildren (parentId) {

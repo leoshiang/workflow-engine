@@ -1,6 +1,0 @@
-module.exports = {
-  ENTRY_POINT: 'ENTRY_POINT',
-  EXIT_POINT: 'EXIT_POINT',
-  PROCESS: 'PROCESS',
-  DECISION: 'DECISION',
-}

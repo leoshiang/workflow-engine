@@ -1,6 +1,10 @@
 const StepTypes = require('./StepTypes')
 const ProcessStep = require('./ProcessStep')
 const DecisionStep = require('./DecisionStep')
+const SendEmailStep = require('./SendEmailStep')
+const CsvReaderStep = require('./CsvReaderStep')
+const HtmlParserStep = require('./HtmlParserReaderStep')
+const EntryDialogStep = require('./PromptStep')
 
 class StepManager {
 
@@ -15,10 +19,14 @@ class StepManager {
   }
 
   init () {
-    this.registerStepClass(StepTypes.ENTRY_POINT, ProcessStep)
-    this.registerStepClass(StepTypes.EXIT_POINT, ProcessStep)
+    this.registerStepClass(StepTypes.START, ProcessStep)
+    this.registerStepClass(StepTypes.STOP, ProcessStep)
     this.registerStepClass(StepTypes.PROCESS, ProcessStep)
     this.registerStepClass(StepTypes.DECISION, DecisionStep)
+    this.registerStepClass(StepTypes.SEND_EMAIL, SendEmailStep)
+    this.registerStepClass(StepTypes.CSV_READER, CsvReaderStep)
+    this.registerStepClass(StepTypes.HTML_PARSER, HtmlParserStep)
+    this.registerStepClass(StepTypes.PROMPT, EntryDialogStep)
   }
 
   registerStepClass (type, stepClass) {
