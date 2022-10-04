@@ -2,8 +2,19 @@ const Step = require('./Step')
 const nodemailer = require('nodemailer')
 
 class SendEmailStep extends Step {
+
   constructor (id, type, code) {
     super(id, type, code)
+    this._body = ''
+    this._from = ''
+    this._host = ''
+    this._password = ''
+    this._port = ''
+    this._recipients = ''
+    this._subject = ''
+    this._userName = ''
+    this._secure = ''
+    this._attachments = ''
   }
 
   get attachments () {
@@ -108,7 +119,7 @@ class SendEmailStep extends Step {
     this._runner = runner
     const transporter = this.createTransporter()
     let message = {
-      from: this.getVariable(this.from) || 'leoshiang@gmail.com',
+      from: this.getVariable(this.from) || '',
       to: this.getVariable(this.recipients),
       subject: this.getVariable(this.subject),
       text: this.getVariable(this.body),

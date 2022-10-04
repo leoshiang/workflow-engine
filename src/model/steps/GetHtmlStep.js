@@ -1,9 +1,28 @@
 const Step = require('./Step')
 const fetch = require('sync-fetch')
 
-class HtmlParserStep extends Step {
+class GetHtmlStep extends Step {
+
   constructor (id, type, code) {
     super(id, type, code)
+    this._url = ''
+    this._resultVarName = ''
+  }
+
+  get resultVarName () {
+    return this._resultVarName
+  }
+
+  set resultVarName (value) {
+    this._resultVarName = value
+  }
+
+  get url () {
+    return this._url
+  }
+
+  set url (value) {
+    this._url = value
   }
 
   async execute (runner) {
@@ -20,4 +39,4 @@ class HtmlParserStep extends Step {
 
 }
 
-module.exports = HtmlParserStep
+module.exports = GetHtmlStep

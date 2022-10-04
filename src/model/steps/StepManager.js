@@ -3,7 +3,7 @@ const ProcessStep = require('./ProcessStep')
 const DecisionStep = require('./DecisionStep')
 const SendEmailStep = require('./SendEmailStep')
 const CsvReaderStep = require('./CsvReaderStep')
-const HtmlParserStep = require('./HtmlParserReaderStep')
+const HtmlParserStep = require('./GetHtmlStep')
 const PromptStep = require('./PromptStep')
 const ExecStep = require('./ExecStep')
 
@@ -26,7 +26,7 @@ class StepManager {
     this.registerStepClass(StepTypes.DECISION, DecisionStep)
     this.registerStepClass(StepTypes.SEND_EMAIL, SendEmailStep)
     this.registerStepClass(StepTypes.CSV_READER, CsvReaderStep)
-    this.registerStepClass(StepTypes.HTML_PARSER, HtmlParserStep)
+    this.registerStepClass(StepTypes.GET_HTML, HtmlParserStep)
     this.registerStepClass(StepTypes.PROMPT, PromptStep)
     this.registerStepClass(StepTypes.EXEC, ExecStep)
   }

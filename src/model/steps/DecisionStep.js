@@ -18,7 +18,7 @@ class DecisionStep extends Step {
   }
 
   getLogicalExpression (connection) {
-    let expression = this._code
+    let expression = this.code
     if (!connection.isLogicalOperand()) {
       expression = expression + ' === ' + connection.code + ';'
     }

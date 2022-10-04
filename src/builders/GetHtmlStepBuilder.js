@@ -1,6 +1,6 @@
 const StepBuilder = require('./StepBuilder')
 
-class HtmlParserStepBuilder extends StepBuilder {
+class GetHtmlStepBuilder extends StepBuilder {
 
   build () {
     const instance = super.build()
@@ -10,4 +10,4 @@ class HtmlParserStepBuilder extends StepBuilder {
   }
 }
 
-module.exports = HtmlParserStepBuilder
+module.exports = GetHtmlStepBuilder
