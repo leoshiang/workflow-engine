@@ -7,4 +7,5 @@ module.exports = {
   CSV_READER: 'CSV_READER',
   HTML_PARSER: 'HTML_PARSER',
   PROMPT: 'PROMPT',
+  EXEC: 'EXEC'
 }

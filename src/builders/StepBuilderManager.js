@@ -4,6 +4,7 @@ const SendEmailStepBuilder = require('./SendEmailStepBuilder')
 const CsvReaderStepBuilder = require('./CsvReaderStepBuilder')
 const HtmlParserStepBuilder = require('./HtmlParsserStepBuilder')
 const PromptStepBuilder = require('./PromptStepBuilder')
+const ExecStepBuilder = require('./ExecStepBuilder')
 
 class StepBuilderManager {
   constructor () {
@@ -25,6 +26,7 @@ class StepBuilderManager {
     this.register(StepTypes.CSV_READER, CsvReaderStepBuilder)
     this.register(StepTypes.HTML_PARSER, HtmlParserStepBuilder)
     this.register(StepTypes.PROMPT, PromptStepBuilder)
+    this.register(StepTypes.EXEC, ExecStepBuilder)
   }
 
   register (type, builderClass) {

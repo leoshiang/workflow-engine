@@ -90,6 +90,7 @@ class Step {
   }
 
   setVariable (varName, value) {
+    if (!varName) return
     this._runner.setVariable(varName, value)
   }
 }
