@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DolphinWorkflowEngine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bcf6157a297e4d1b4484978456d45eb6deb5e29")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd3b74e3f424915c1888b06d9a581213fc861f18")]
 [assembly: System.Reflection.AssemblyProductAttribute("DolphinWorkflowEngine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Workflow Engine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
