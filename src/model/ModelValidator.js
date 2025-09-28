@@ -1,48 +1,65 @@
 const StepTypes = require('./steps/StepTypes')
+const ErrorMessages = require('../constants/ErrorMessages')
 
 class ModelValidator {
+    constructor() {
+        this._rules = []
+        this.initRules()
+    }
 
-  constructor () {
-    this._rules = []
-    this.initRules()
-  }
+    everyProcessStepMustHaveSourceAndTarget(model) {
+        const result = []
+        const processSteps = this.getProcessSteps(model)
 
-  everyProcessStepMustHaveSourceAndTarget (model) {
-    const result = []
-    this.getProcessSteps(model).forEach(x => {
-      if (x.sourceConnections.length === 0) {
-        result.push(`\r\n沒有來源連接到此步驟。\r\n編號:${x.id}\r\nCode:${x.code}`)
-      }
-      if (x.targetConnections.length === 0) {
-        result.push(`\r\n沒有連接到其他步驟。\r\n編號:${x.id}\r\nCode:${x.code}`)
-      }
-    })
-    return result
-  }
+        processSteps.forEach(step => {
+            if (step.sourceConnections.length === 0) {
+                result.push(this.formatErrorMessage(ErrorMessages.NO_SOURCE_CONNECTION, step))
+            }
+            if (step.targetConnections.length === 0) {
+                result.push(this.formatErrorMessage(ErrorMessages.NO_TARGET_CONNECTION, step))
+            }
+        })
 
-  getProcessSteps (model) {
-    return model.steps.filter(
-      x => x.type !== StepTypes.START && x.type !== StepTypes.STOP)
-  }
+        return result
+    }
 
-  initRules () {
-    this._rules.push(this.mustHaveStartAndStop.bind(this))
-    this._rules.push(this.everyProcessStepMustHaveSourceAndTarget.bind(this))
-  }
+    formatErrorMessage(message, step) {
+        return `\r\n${message}\r\n編號: ${step.id}\r\n程式碼: ${step.code}`
+    }
 
-  mustHaveStartAndStop (model) {
-    const result = []
-    if (!model.findEntryPoint()) result.push('沒有起點(START)')
-    if (!model.findExitPoint()) result.push('沒有迄點(STOP)')
-    return result
-  }
+    getProcessSteps(model) {
+        return model.steps.filter(
+            step => step.type !== StepTypes.START && step.type !== StepTypes.STOP
+        )
+    }
 
-  validate (model) {
-    let messages = []
-    this._rules.forEach(x => messages = messages.concat(x(model)))
-    return messages
-  }
+    initRules() {
+        this._rules.push(this.mustHaveStartAndStop.bind(this))
+        this._rules.push(this.everyProcessStepMustHaveSourceAndTarget.bind(this))
+    }
 
+    mustHaveStartAndStop(model) {
+        const result = []
+        if (!model.findEntryPoint()) {
+            result.push(ErrorMessages.MISSING_START_STEP)
+        }
+        if (!model.findExitPoint()) {
+            result.push(ErrorMessages.MISSING_STOP_STEP)
+        }
+        return result
+    }
+
+    validate(model) {
+        if (!model) {
+            throw new Error('模型不能為空')
+        }
+
+        let messages = []
+        this._rules.forEach(rule => {
+            messages = messages.concat(rule(model))
+        })
+        return messages
+    }
 }
 
 module.exports = ModelValidator
